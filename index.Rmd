@@ -20,4 +20,26 @@ covid <- read.csv(file = "05_10_22_CSV_GENERAL.csv", sep = ";")
 
 ## Procesamiento 
 
+## Opciones generales 
+```{r opciones generales}
+options(scipen = 7)
+```
+
+
+### Curación de datos 
+```{r conversion-fecha}
+covid$FECHA <- as.Date(covid$FECHA, format = "%d/%m/%Y")
+```
+
+
 ## Salidas 
+
+### Gráficos 
+
+#### Casos acumulados 
+
+##### Casos positivos  
+```{r casos-positivos-acumulados}
+plot(covid$FECHA, covid$positivos, main = "Casos acumulados positivos de COVID-19 en Costa Rica", xlab = "Fecha", ylab = "Casos")
+```
+
