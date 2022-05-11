@@ -45,7 +45,7 @@ covid$FECHA <- as.Date(covid$FECHA, format = "%d/%m/%Y")
 
 #### Casos acumulados 
 
-##### Casos positivos  
+##### Positivos  
 ```{r casos-positivos-acumulados}
 plot(
   covid$FECHA,
@@ -72,7 +72,10 @@ axis(
   cex.axis = .7
 )
 ```
-##### Fallecidos 
+
+
+
+##### Fallecidos
 ```{r casos-fallecidos-acumulados}
 plot(
   covid$FECHA,
